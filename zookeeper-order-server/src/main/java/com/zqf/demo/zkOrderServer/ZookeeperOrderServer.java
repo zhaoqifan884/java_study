@@ -49,6 +49,7 @@ public class ZookeeperOrderServer {
                     System.out.println("zookeeper客户端连接成功");
 
                     try {
+                        //获取数据
                         getData();
 
                         // 2.绑定永久事件监听
