@@ -80,7 +80,8 @@ public class ZookeeperOrderServer {
             private void getData() throws KeeperException, InterruptedException {
                 //1.获取对应的地址列表
                 List<String> serverAddr = zooKeeper.getChildren(PATH, null);
-                List<String> tempList=new ArrayList<>();
+                //创建一个临时列表
+                List<String> tempList = new ArrayList<>();
                 for (String path : serverAddr) {
                     //获取节点路径数据
                     byte[] data = zooKeeper.getData(PATH+"/"+path, null, new Stat());
