@@ -92,6 +92,10 @@ public class Order02Controller {
         }
     }
 
+    /**
+     * 等待锁
+     * @param currentPath
+     */
     public void waitLock(String currentPath) {
         try {
             //获取所有子节点列表
